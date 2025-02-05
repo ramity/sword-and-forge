@@ -1,0 +1,23 @@
+services:
+
+  minecraft:
+    build:
+      context: ./
+      dockerfile: docker/minecraft/Dockerfile
+    container_name: swordandforge
+    image: swordandforge
+    ports:
+      - 25566:25565
+    environment:
+      EULA: True
+      INIT_MEMORY: 8G
+      MAX_MEMORY: 24G
+      TYPE: FORGE
+      VERSION: "1.19.2"
+      FORGE_VERSION: "43.3.13"
+    volumes:
+    - ./data:/data
+
+networks:
+  default:
+    name: swordandforge_network
