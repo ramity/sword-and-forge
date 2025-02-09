@@ -8,15 +8,22 @@ services:
     image: swordandforge
     ports:
       - 25566:25565
+      - 24454:24454
     environment:
       EULA: True
-      INIT_MEMORY: 8G
+      INIT_MEMORY: 16G
       MAX_MEMORY: 24G
       TYPE: FORGE
       VERSION: "1.19.2"
-      FORGE_VERSION: "43.3.13"
+      FORGE_VERSION: "43.4.16"
+
+    # RAM-DISK
     volumes:
-    - ./data:/data
+    - ./ram_disk:/data
+
+    # DATA FS:
+    # volumes:
+    # - ./data:/data
 
 networks:
   default:

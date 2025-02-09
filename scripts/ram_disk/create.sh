@@ -13,8 +13,8 @@ if mountpoint -q "$path"; then
     exit 1
 fi
 
-# Create a temporary ram disk with 4G size
-sudo mount -t tmpfs -o rw,size=4G tmpfs $path
+# Create a temporary ram disk with 20G size
+sudo mount -t tmpfs -o rw,size=20G tmpfs $path
 
 # Success message
 echo "Created ram-disk at $path directory."
