@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Config
-from="./ram_disk"
+from="./ram_disk/*"
 to="./data"
 
 # Check if the directory is empty
