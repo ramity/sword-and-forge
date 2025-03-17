@@ -18,12 +18,12 @@ services:
       FORGE_VERSION: "43.4.16"
 
     # RAM-DISK
-    volumes:
-    - ./ram_disk:/data
+    # volumes:
+    # - ./ram_disk:/data
 
     # DATA FS:
-    # volumes:
-    # - ./data:/data
+    volumes:
+    - ./data:/data
 
 networks:
   default:
