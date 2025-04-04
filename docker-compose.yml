@@ -14,8 +14,8 @@ services:
       INIT_MEMORY: 16G
       MAX_MEMORY: 24G
       TYPE: FORGE
-      VERSION: "1.19.2"
-      FORGE_VERSION: "43.4.16"
+      VERSION: "1.20.1"
+      FORGE_VERSION: "47.4.0"
 
     # RAM-DISK
     # volumes:
@@ -24,6 +24,7 @@ services:
     # DATA FS:
     volumes:
     - ./data:/data
+    restart: unless-stopped
 
 networks:
   default:
