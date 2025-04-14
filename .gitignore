@@ -1,3 +1,4 @@
 data/*
 ram_disk/*
+backups/*
 !.gitkeep
